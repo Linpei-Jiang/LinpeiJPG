@@ -1,0 +1,136 @@
+* {margin: 0; padding: 0; text-decoration: none;}
+html, body {overscroll-behavior: none; background: #f1f1f1;}
+
+.mobileWrapper {
+    width: 100vw;
+    display: flex;
+    padding: 20px 0;
+    background: rgba(255,255,255,0.15);
+    margin-bottom: -15px;
+}
+.mobileWrapper p {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto;
+    transition: 0.3s;
+}
+.mobileWrapper:hover .mobileWrapper p {scale: 0.95;}
+
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    z-index: 9999;
+    background: black;
+}
+.logoSet {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    margin-left: 5%;
+}
+.logoSet:hover {cursor: pointer;}
+.icon {
+    height: 80%;
+}
+.logoSet h2 {
+    color: white;
+    margin-left: 10px;
+}
+
+@media (max-width: 430px)
+{
+    .icon {margin-left: 4%;}
+    .logoSet {margin-left: 2%;}
+    .logoSet h2 {font-size: 22px;}
+}
+
+header a {text-decoration: none; font-size: 18px; font-weight: 450; color: #efefef; transition: 0.3s;}
+header a:hover {color: white; font-weight: bold;}
+
+.desktopNav {
+    position: absolute;
+    right: 50px;
+    display: flex;
+    width: 35%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.3s;
+}
+.desktopNav li, .mobileNav li {list-style: none;}
+
+/* HAMBURGER */
+.menu {
+    z-index: 616;
+    position: absolute;
+    right: 5%;
+    height: 40px;
+    display: none; /* hidden on desktop */
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.menu:hover, .userArea:hover, .mobileUserArea:hover {cursor: pointer;}
+.menu span {
+    border-radius: 5px;
+    width: 35px;
+    height: 6px;
+    background: #fff;
+    transition: 0.3s;
+}
+
+.mobileMenu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    padding: 20px 0;
+    transition: 0.3s;
+}
+.mobileMenu a {
+    margin-left: 50px;
+    display: block;
+    padding: 14px 0;
+    color: white;
+    font-size: 22px;
+}
+.mobileMenu a:hover {cursor: pointer;}
+
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+    .desktopNav {display: none;}
+    .menu {display: flex;}
+    .logo,.logoChanged {margin-left: 20px;}
+
+    .loginBtn {
+        padding: 0;
+        margin-bottom: -18px;
+        width: 100%;
+    }
+}
+
+/* When active */
+.menu.active {position: fixed; top: 20px;}
+.menu.active span:nth-child(1) {transform: translateY(12px) rotate(45deg);}
+.menu.active span:nth-child(2) {opacity: 0;}
+.menu.active span:nth-child(3) {transform: translateY(-12px) rotate(-45deg);}
+
+/* When menu is open */
+@media (max-width: 900px) {
+    .mobileMenu.open {
+        display: flex;
+    }
+}
+
+#header[data-page="home"] header {background: black; .PositionMain a {color: white; font-weight: bold;}}
+#header[data-page="portfolio"] header {position: fixed; .PositionPortfolio a {color: white; font-weight: bold;}}
+#header[data-page="blog"] header {position: fixed; .PositionBlog a {color: white; font-weight: bold;}}
+#header[data-page="contact"] header {position: fixed; .PositionContact a {color: white; font-weight: bold;}}

@@ -1,0 +1,187 @@
+body {
+    box-sizing: border-box;
+}
+
+:root {
+    --scroll-y: 0px;
+}
+
+#HOME_HERO_WRAPPER {
+    height: calc(100vh - 100px);
+    overflow: hidden;
+}
+
+#HOME_HERO {
+    height: 120%; /* gives room to move */
+    background-image: url('../images/LinpeiDiaryHeroImg.JPG');
+    background-size: cover;
+    background-position: right;
+    transform: translateY(calc(var(--scroll-y) * -0.2));
+}
+
+
+body.header-fixed header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+body.header-fixed .wrapper {
+    margin-top: 100px;
+}
+
+/*HORIZONTAL SLIDER*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400;700&display=swap');
+
+
+.wrapper {
+    overflow-x: hidden;
+    position: relative;
+}
+* {
+    box-sizing: border-box;
+}
+
+.wrapperTitle {
+    position: absolute;
+    top: 150px;
+    margin-left: 1.8%;
+}
+
+@media (max-width: 1000px) {.wrapper {display: none;}}
+
+.container {
+    display: flex;
+    width: 200vw;
+
+    .col {
+        display: flex;
+        gap: 3em;
+
+        p {
+            font-size: .8rem;
+        }
+    }
+
+    section {
+        display: flex;
+        width: 30vw;
+        padding-left: 1vw;
+        justify-content: center;
+        flex-direction: column;
+
+        a {
+            margin-top: 100px;
+            width: 100%;
+            aspect-ratio: 1/1;
+            background: black;
+            border-radius: 2em;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 2vw;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        a:hover {
+            border-radius: 100px;
+        }
+
+    }
+}
+
+section {
+    height: 100vh;
+}
+
+.sec1 {
+    margin-left: 20vw;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+
+    h1 {
+        margin-bottom: -10px;
+        font-size: 3rem;
+    }
+}
+
+/*SOCIAL MEDIA*/
+.socialMediaLinks {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2% 0 0 0;
+}
+
+.socialMediaBoxes {
+    display: flex;
+    justify-content: space-evenly;
+    width: 35%;
+}
+
+.socialMediaLinkBox {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mediaLink {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 80px;
+    aspect-ratio: 1/1;
+    transition: 0.3s ease;
+}
+
+.mediaLink:hover {
+    transform: scale(1.1);
+}
+
+#Instagram {background-size: 145%;}
+#TikTok {background-size: 113%;}
+#bilibili {background-size: 126%;}
+#redNote {background-size: 164%;}
+
+/*CONTAINER COVER OVER*/
+.containerCover {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+}
+
+.img {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    width: 70vw;
+    height: 60vh;
+}
+
+.img img  {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card.scroll {
+    position: relative;
+}
