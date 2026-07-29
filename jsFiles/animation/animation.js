@@ -2,7 +2,7 @@
 window.addEventListener("load", () => {
     setTimeout(() => {
         document.getElementById("loader").classList.add("hidden");
-    }, 1000);
+    }, 1100);
 });
 
 // when user refresh, move to very top

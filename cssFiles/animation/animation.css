@@ -16,18 +16,17 @@
     visibility: hidden;
 }
 
-@keyframes spin {
-    to { transform: rotate(360deg); }
+#loader svg {
+    animation: fade-out 1s linear forwards;
 }
 
-#logo * {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: draw 1s ease forwards;
-}
-
-@keyframes draw {
-    to {
-        stroke-dashoffset: 0;
+@keyframes fade-out {
+     0% {
+         opacity: 1;
+         scale: 1;
+     }
+    100% {
+        opacity: 0;
+        scale: 0.5;
     }
 }
