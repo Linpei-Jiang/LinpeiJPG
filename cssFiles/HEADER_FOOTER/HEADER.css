@@ -55,7 +55,7 @@ header a:hover {color: white; font-weight: bold;}
     position: absolute;
     right: 50px;
     display: flex;
-    width: 35%;
+    width: 30%;
     height: 100%;
     justify-content: space-around;
     align-items: center;
