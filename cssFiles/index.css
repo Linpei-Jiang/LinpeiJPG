@@ -1,16 +1,20 @@
-body {
+* {
     box-sizing: border-box;
 }
-
 :root {
     --scroll-y: 0px;
 }
 
+/*HERO START*/
 #HOME_HERO_WRAPPER {
     height: calc(100vh - 100px);
     overflow: hidden;
 }
-
+@media (max-width: 1000px) {
+    #HOME_HERO_WRAPPER {
+        height: calc(100vh - 150px);
+    }
+}
 #HOME_HERO {
     height: 120%; /* gives room to move */
     background-image: url('../images/LinpeiDiaryHeroImg.JPG');
@@ -18,42 +22,31 @@ body {
     background-position: right;
     transform: translateY(calc(var(--scroll-y) * -0.2));
 }
-
-
-body.header-fixed header {
+body.header-fixed header, body.header-fixed-mobile header {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
 }
-
-body.header-fixed .wrapper {
+body.header-fixed .wrapper, body.header-fixed-mobile .wrapper {
     margin-top: 100px;
 }
+/*HERO END*/
 
-/*HORIZONTAL SLIDER*/
+/*HORIZONTAL SLIDER START*/
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400;700&display=swap');
-
-
 .wrapper {
     overflow-x: hidden;
     position: relative;
 }
-* {
-    box-sizing: border-box;
-}
-
 .wrapperTitle {
     position: absolute;
     top: 150px;
     margin-left: 1.8%;
 }
-
-@media (max-width: 1000px) {.wrapper {display: none;}}
-
 .container {
     display: flex;
     width: 200vw;
+    height: 100vh;
 
     .col {
         display: flex;
@@ -64,7 +57,7 @@ body.header-fixed .wrapper {
         }
     }
 
-    section {
+    .sec1, .sec2, .sec3, .sec4, .sec5 {
         display: flex;
         width: 30vw;
         padding-left: 1vw;
@@ -95,77 +88,58 @@ body.header-fixed .wrapper {
 
     }
 }
-
-section {
-    height: 100vh;
+.card, .sec2, .sec3, .sec4, .sec5 {
+    height: 80vh;
 }
-
 .sec1 {
     margin-left: 20vw;
 }
+.sec2, .sec3, .sec4, .sec5 {margin-top: 75px;}
 
-.title {
+/*MOBILE VIEW*/
+.categories {
     width: 100%;
-    text-align: center;
-
-    h1 {
-        margin-bottom: -10px;
-        font-size: 3rem;
-    }
-}
-
-/*SOCIAL MEDIA*/
-.socialMediaLinks {
-    width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 2% 0 0 0;
+    padding: 50px 10px;
 }
-
-.socialMediaBoxes {
-    display: flex;
-    justify-content: space-evenly;
-    width: 35%;
+.categoriesCard {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    justify-content: space-evenly !important;
+    padding: 0 10px;
 }
-
-.socialMediaLinkBox {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-.mediaLink {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 80px;
+.categoriesMobileCard a {
     aspect-ratio: 1/1;
-    transition: 0.3s ease;
+    background: black;
+    border-radius: 2em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.3s;
+    text-transform: uppercase;
 }
-
-.mediaLink:hover {
-    transform: scale(1.1);
+.categoriesMobileCard a:hover {
+    border-radius: 100px;
 }
+@media (max-width: 800px) {.container {display: none;} .categories {display: flex;}}
+@media (min-width: 800px) {.container {display: flex;} .categories {display: none;}}
+/*HORIZONTAL SLIDER END*/
 
-#Instagram {background-size: 145%;}
-#TikTok {background-size: 113%;}
-#bilibili {background-size: 126%;}
-#redNote {background-size: 164%;}
-
-/*CONTAINER COVER OVER*/
+/*VIDEO SCROLL START*/
 .containerCover {
     position: relative;
     width: 100%;
     height: 100%;
 }
-
-section {
-    width: 100vw;
-    height: 100vh;
-}
-
 .video {
     position: absolute;
     top: 60%;
@@ -174,19 +148,21 @@ section {
     width: 70vw;
     height: 60vh;
 }
-
+@media (max-width: 1000px) {.video {width: 90vw; height: 40vh;}}
 .video video  {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
 }
-
 .card.scroll {
     position: relative;
 }
 
-/*ABOUT SECTION*/
+@media (max-width: 800px) {.containerCover {padding-top: 50px;}}
+/*VIDEO SCROLL END*/
+
+/*ABOUT SECTION START*/
 .aboutMe {
     width: 100%;
     height: 100%;
@@ -195,12 +171,10 @@ section {
     align-items: center;
     padding: 100px 15%;
 }
-
 .aboutMeTitle {
     width: 100%;
     font-size: 2.5rem;
 }
-
 .aboutMeContactBtn {
     padding: 10px 20px;
     background: black;
@@ -211,11 +185,9 @@ section {
     transition: 0.3s ease-in-out;
     cursor: pointer;
 }
-
 .aboutMeContactBtn:hover {
     background: rgb(36 42 184);
 }
-
 .aboutWrapper {
     width: 100%;
 
@@ -233,21 +205,83 @@ section {
         color: rgb(93, 97, 193);
     }
 }
+@media (max-width: 500px) {.aboutMeTitle {font-size: 2rem;}}
 
-.blogs {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 100px 0;
+@media (max-width: 1000px) {
+    .aboutMe {flex-direction: column;}
+    .aboutWrapper {margin-top: 50px;}
 }
+/*ABOUT SECTION END*/
 
-.blogsContent {
+/*BEHIND THE SCENE SECTION START*/
+.behind-the-scene {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    margin-top: 100px;
+    padding: 40px 0;
+    color: black;
+}
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.section-header h3 {
+    color: rgb(93, 97, 193);
+    font-weight: 600;
+    margin-bottom: -7px;
+    font-size: clamp(10px, 5vw, 1.2rem);
+}
+.section-header h1 {
+    text-transform: uppercase;
+    font-size: clamp(20px, 5vw, 2.5rem);
+    color: black;
+}
+.scene-grid {
+    margin-top: -1rem;
+    padding: 0 10%;
+    display: grid;
     justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 15px;
+}
+.scene-card {
+    background: #f9f7f7;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px rgb(132, 132, 156);
+}
+.scene-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+.scene-content {
+    padding: 20px 25px;
+    text-align: left;
+}
+.scene-content h2 {
+    font-size: clamp(13px, 2vw, 20px);
+    margin-bottom: 5px;
+    color: black;
+}
+.icon {display: flex; align-items: center;}
+.scene-content .icon img {
+    width: 10px;
+    height: 100%;
+    margin-right: 5px;
+}
+.scene-content p {
+    font-size: clamp(10px, 2vw, 13px);
+    color: rgb(93, 97, 193);
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+.photo-meta {
+    display: flex;
+    gap: 12px;
+    font-weight: 600;
+    font-size: clamp(10px, 2vw, 12px);
+    color: black;
+    margin-bottom: 15px;
 }
 
 .selectBlogs {
@@ -257,7 +291,6 @@ section {
     justify-content: center;
     gap: 10px;
 }
-
 .selectBlogs button {
     padding: 10px 15px;
     border-radius: 5px;
@@ -267,78 +300,72 @@ section {
     font-size: 12px;
     background: #dcdcdc;
 }
-
 #daily {
     background: black;
     color: white;
 }
-
 .blogsContentBox {
-    margin-top: 50px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-.blogsContentInfo {
+    margin-top: 3rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 15px;
-    width: 85%;
 }
-
-.blogsContentInfoBox {
-    box-sizing: border-box;
-    width: 100%;
-    aspect-ratio: 3/3.5;
-    border-radius: 10px;
-    padding: 15px;
-    color: black;
-    box-shadow: 2px 2px 6px rgb(61, 61, 78);
-    transition: 0.3s;
-}
-
-.blogsContentInfoBox:hover {
-    box-shadow: 0px 0px 8px rgb(66, 67, 90);
-    scale: 0.995;
-}
-
-.img {
-    width: 100%;
-    height: 60%;
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-}
-
-.blogsContentInfoBox h3 {margin-top: 10px; font-size: clamp(12px, 1.2vw, 1.5vw); line-height: clamp(15px, 1.5vw, 1.5vw);}
-.blogsContentInfoBox p {margin-top: 10px; font-size: 15px; line-height: clamp(15px, 1.5vw, 1.2vw);}
-
-@media (max-width: 600px) {.blogsContentInfo {grid-template-columns: 48% 48%; width: 95%;}  .blogsContentInfoBox {height: 300px;}}
-@media (max-width: 400px) {.blogsContentInfoBox p {font-size: 12px;}}
-
 #travelBlogs, #otherBlogs {display: none;}
 
-.viewMoreBlogs {
-    width: auto;
-    margin-top: 50px;
-    text-align: center;
+/* Responsive adjustments */
+@media (max-width: 800px) {
+    .behind-the-scene {margin-top: -30px;}
+    .scene-content {padding: 10px 15px;}
+    .scene-grid {gap: 15px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));}
+    .scene-card img {
+        height: 130px;
+    }
 }
-
-.viewMoreBlogs button {
-    background: black;
-    border: none;
-    border-radius: 15px;
-    padding: 10px 50px;
-    color: white;
-    cursor: pointer;
-    font-weight: 500;
-    transition: 0.3s;
+@media (max-width: 570px) {
+    .scene-grid {padding: 0 5%; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));}
+    .scene-content {padding: 10px;}
+    .scene-card img {
+        height: 100px;
+    }
 }
+@media (max-width: 450px) {.scene-grid {grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));}}
 
-.viewMoreBlogs button:hover {
-    background: rgb(36 42 184);
+/*BEHIND THE SCENE END*/
+
+/*SOCIAL MEDIA START*/
+.socialMediaLinks {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-around;
+    padding: 5%;
+    margin-bottom: 100px;
 }
-
+.socialMediaBoxes {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.socialMediaLinkBox {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.mediaLink {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 80px;
+    aspect-ratio: 1/1;
+    transition: 0.3s ease;
+}
+.mediaLink:hover {
+    transform: scale(1.1);
+}
+#Instagram {background-size: 145%;}
+#TikTok {background-size: 113%;}
+#bilibili {background-size: 126%;}
+#redNote {background-size: 164%;}
+/*SOCIAL MEDIA END*/

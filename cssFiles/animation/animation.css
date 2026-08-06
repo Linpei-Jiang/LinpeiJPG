@@ -17,16 +17,29 @@
 }
 
 #loader svg {
-    animation: fade-out 1s linear forwards;
+    animation: loader 1s linear forwards;
 }
 
-@keyframes fade-out {
+@keyframes loader {
      0% {
-         opacity: 1;
-         scale: 1;
+         scale: 0.5;
      }
+    20% {
+        transform: translateY(-90px);
+        scale: .8;
+    }
+    40% {
+        transform: translateY(0);
+    }
+    60% {
+        scale: 1;
+        transform: translateY(-45px);
+    }
+    70% {
+        transform: translateY(0);
+    }
     100% {
-        opacity: 0;
-        scale: 0.5;
+        scale: 0.1;
+        display: none;
     }
 }

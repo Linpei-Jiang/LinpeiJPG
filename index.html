@@ -18,16 +18,19 @@
         </svg>
     </div>
 
+    <!--HERO SECTION-->
     <div id="HOME_HERO_WRAPPER">
         <div id="HOME_HERO"></div>
     </div>
 
+    <!--HEADER-->
     <header id="header" data-page="home"></header>
 
     <main>
+        <!--HORIZONTAL SLIDER-->
         <div class="wrapper">
             <div class="container scrollx">
-                <h1 class="wrapperTitle">Portfolio Projects →</h1>
+                <h1 class="wrapperTitle">Portfolio Categories →</h1>
 
                 <section class="sec1 pin">
                     <a href="" style="background-image: url('images/webDevelopment.png'); background-size: cover;">Web Development</a>
@@ -48,11 +51,188 @@
             </div>
         </div>
 
-        <section class="socialMediaLinks pinned">
-            <div class="title">
-                <h1>Social Media</h1>
+        <section class="categories">
+            <h1 class="categoriesTitle">Portfolio Categories →</h1>
+
+            <div class="categoriesCard">
+                <div class="categoriesMobileCard">
+                    <a href="" style="background-image: url('images/webDevelopment.png'); background-size: cover;">Web Development</a>
+                </div>
+                <div class="categoriesMobileCard">
+                    <a href="" style="background-image: url('images/eventPhotography.jpg'); background-size: cover;">Event Photography</a>
+                </div>
+                <div class="categoriesMobileCard">
+                    <a href="" style="background-image: url('images/shortCinematic.jpg'); background-size: cover;">Short Cinematic</a>
+                </div>
+                <div class="categoriesMobileCard">
+                    <a href="" style="background-image: url('images/shortFilm.jpg'); background-size: cover;">Short Films</a>
+                </div>
+
+                <div class="categoriesMobileCard">
+                    <a href="" style="background-image: url('images/graphicDesign.JPG'); background-size: cover;">Graphic Design</a>
+                </div>
+            </div>
+        </section>
+
+        <!--VIDEO SLIDER-->
+        <div class="containerCover">
+            <section class="card pinned">
+                <div class="video">
+                    <video src="videos/FuzhouV.mp4" autoplay muted loop></video></div>
+            </section>
+
+            <section class="card pinned">
+                <div class="video">
+                    <video src="videos/TheFourQuartersTimeofHeat.mp4" autoplay muted loop></video></div>
+            </section>
+
+            <section class="card scroll">
+                <div class="video">
+                    <video src="videos/coneyIslandFireworks.mp4" autoplay muted loop></video>
+                </div>
+            </section>
+        </div>
+
+        <!--ABOUT SECTION-->
+        <section class="aboutMe">
+            <div class="aboutMeTitle">
+                <h1>About Me</h1>
+                <a href="contact.html" class="aboutMeContactBtn">Contact Me</a>
             </div>
 
+            <div class="aboutWrapper">
+                <p>Hello! My name is Linpei Jiang. A 19 years old photographer, graphic designer, web developer from Fujian China that is currently based in NYC.</p>
+                <br>
+                <p>Over the last 4 years, I have self thought HTML, CSS and some JavaScript. Had many projects like <a href="https://gingerdejournal-studio.github.io/gingerjournal/" target="_blank">GingerJournal</a> and <a href="https://linpei-jiang.github.io/TECHSket/" target="_blank">TECHSket</a>. And over the few months I started to create video content, Looking forward to what I can bring to the community.</p>
+            </div>
+        </section>
+
+        <!--BEHIND THE SCENE-->
+        <section class="behind-the-scene">
+            <div class="section-header">
+                <h3>Breakdown of My Projects</h3>
+                <h1>Featured Work</h1>
+            </div>
+
+            <div class="blogsContent">
+                <div class="selectBlogs">
+                    <button id="daily" onclick="switchToDaily()">Photography</button>
+                    <button id="travel" onclick="switchToTravel()">Videography</button>
+                    <button id="other" onclick="switchToOther()">Web Development</button>
+                </div>
+
+                <div class="blogsContentBox">
+                    <div id="dailyBlogs" class="scene-grid" oncontextmenu="return false;">
+                        <div class="scene-card">
+                            <img src="https://pub-5960f80e5c2048d59ac70685dbf8e8f4.r2.dev/Featured-Work/Photography/_MG_8456.JPG">
+                            <div class="scene-content">
+                                <h2>Street Photography</h2>
+                                <p class="icon"><img src="https://pub-3a50bbfda00a49b2b959d58cd7bea019.r2.dev/Images/Logo/Icons/Location.svg"> NY, USA</p>
+                                <p>This photo was taken with a Canon R10 on the ferry from Brooklyn to Dumbo, during the blue hour after sunset. Feeling the wind and the water.</p>
+                                <div class="photo-meta">
+                                    <span>1/45</span><span>F4.5</span><span>18mm</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scene-card">
+                            <img src="https://pub-5960f80e5c2048d59ac70685dbf8e8f4.r2.dev/Featured-Work/Photography/_MG_1412.jpg">
+                            <div class="scene-content">
+                                <h2>Travel Photography</h2>
+                                <p class="icon"><img src="https://pub-3a50bbfda00a49b2b959d58cd7bea019.r2.dev/Images/Logo/Icons/Location.svg"> Nanjing, China</p>
+                                <p>Taken at Dumbo Park with Canon R10, 2025 I went on a solo trip back to my hometown China. Traveled to 6 different cities and Nanjing was one of my favorite.</p>
+                                <div class="photo-meta">
+                                    <span>1/2,000</span><span>F8.0</span><span>32mm</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scene-card">
+                            <img src="https://pub-5960f80e5c2048d59ac70685dbf8e8f4.r2.dev/Featured-Work/Photography/_MG_0825%202.JPG">
+                            <div class="scene-content">
+                                <h2>Event Photography</h2>
+                                <p class="icon"><img src="https://pub-3a50bbfda00a49b2b959d58cd7bea019.r2.dev/Images/Logo/Icons/Location.svg"> NY, USA</p>
+                                <p>During my high school years, I was glad to be apart of our school's robotics team and made an impact to the community.</p>
+                                <div class="photo-meta">
+                                    <span>1/160</span><span>F6.3</span><span>18mm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="travelBlogs" class="scene-grid" oncontextmenu="return false;">
+                        <div class="scene-card">
+                            <img src="images/ShortCinematic/19thBDay.png">
+                            <div class="scene-content">
+                                <h2>19th Birthday Video</h2>
+                                <p class="icon"><img src="https://pub-3a50bbfda00a49b2b959d58cd7bea019.r2.dev/Images/Logo/Icons/Location.svg"> NY, USA</p>
+                                <p>My first ever short cinematic, a week before my birthday I was going to Central Park with my friend and the day before that I started writing the script. The shots took around few hours and end it up becoming my first ever cinematic video.</p>
+                                <div class="photo-meta">
+                                    <span>Canon EOS R10/SIGMA 16-300mm</span><span>Duration: 1:36</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scene-card">
+                            <img src="images/ShortCinematic/SummerVid.png">
+                            <div class="scene-content">
+                                <h2>The Four Quarters Series V1</h2>
+                                <p class="icon"><img src="https://pub-3a50bbfda00a49b2b959d58cd7bea019.r2.dev/Images/Logo/Icons/Location.svg"> NY, USA</p>
+                                <p>After graduating from FHHS, I had nothing to do and I was like why don't I ask my friends how is their summer so far and make it into a video? After the last video I've become more confident and everytime I go out I want to bring my camera with me.</p>
+                                <div class="photo-meta">
+                                    <span>Canon EOS R10/SIGMA 16-300mm</span><span>Duration: 2:35</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scene-card">
+                            <img src="images/ShortCinematic/Fuzhou.png">
+                            <div class="scene-content">
+                                <h2>Documentary about Fuzhou</h2>
+                                <p class="icon"><img src="https://pub-3a50bbfda00a49b2b959d58cd7bea019.r2.dev/Images/Logo/Icons/Location.svg"> Fuzhou, China</p>
+                                <p>N/A</p>
+                                <div class="photo-meta">
+                                    <span>N/A</span><span>N/A</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="otherBlogs" class="scene-grid" oncontextmenu="return false;">
+<!--                        <div class="scene-card">-->
+<!--                            <img src="https://pub-3a50bbfda00a49b2b959d58cd7bea019.r2.dev/linpeiJPG/_MG_1202.jpg">-->
+<!--                            <div class="scene-content">-->
+<!--                                <h2>Staten Island Ferry</h2>-->
+<!--                                <p class="icon"><img src="https://pub-3a50bbfda00a49b2b959d58cd7bea019.r2.dev/Images/Logo/Icons/Location.svg"> Manhattan Staten Island Ferry</p>-->
+<!--                                <p>This photo was taken with a Canon R10 on the ferry from Manhattan to Staten Island — capturing a wide view of the Manhattan skyline.</p>-->
+<!--                                <div class="photo-meta">-->
+<!--                                    <span>1/2,500</span><span>F32.0</span><span>44mm</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="scene-card">-->
+<!--                            <img src="https://pub-3a50bbfda00a49b2b959d58cd7bea019.r2.dev/Images/WEBSITE_IMAGES/BEHIND_THE_SCENE_STORIES/MANHATTEN%20BRIDGE.JPG">-->
+<!--                            <div class="scene-content">-->
+<!--                                <h2>Manhattan Bridge</h2>-->
+<!--                                <p class="icon"><img src="https://pub-3a50bbfda00a49b2b959d58cd7bea019.r2.dev/Images/Logo/Icons/Location.svg"> Manhattan Bridge View at Dumbo</p>-->
+<!--                                <p>Taken at Dumbo Park with Canon R10 — a clean look at the iconic Manhattan Bridge with the river in view.</p>-->
+<!--                                <div class="photo-meta">-->
+<!--                                    <span>1/2,000</span><span>F20.0</span><span>18mm</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="scene-card">-->
+<!--                            <img src="https://pub-3a50bbfda00a49b2b959d58cd7bea019.r2.dev/Images/WEBSITE_IMAGES/BEHIND_THE_SCENE_STORIES/MERCER%20LABS.JPG">-->
+<!--                            <div class="scene-content">-->
+<!--                                <h2>Mercer Labs</h2>-->
+<!--                                <p class="icon"><img src="https://pub-3a50bbfda00a49b2b959d58cd7bea019.r2.dev/Images/Logo/Icons/Location.svg"> Manhattan Mercer Labs</p>-->
+<!--                                <p>Using a slower shutter speed in Mercer Labs, this Canon R10 shot captures the light lines across the art space.</p>-->
+<!--                                <div class="photo-meta">-->
+<!--                                    <span>0.06</span><span>F16.0</span><span>18mm</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--SOCIAL MEDIA SECTION-->
+        <section class="socialMediaLinks pinned">
             <div class="socialMediaBoxes">
                 <div class="socialMediaLinkBox">
                     <a href="" class="mediaLink" style="background-image: url('images/socialIcon/YouTube.png');"></a>
@@ -75,75 +255,6 @@
                 </div>
             </div>
         </section>
-
-        <div class="containerCover">
-            <section class="card pinned">
-                <div class="video">
-                    <video src="videos/FuzhouV.mp4" autoplay muted loop></video></div>
-            </section>
-
-            <section class="card pinned">
-                <div class="video">
-                    <video src="videos/TheFourQuartersTimeofHeat.mp4" autoplay muted loop></video></div>
-            </section>
-
-            <section class="card scroll">
-                <div class="video">
-                    <video src="videos/coneyIslandFireworks.mp4" autoplay muted loop></video>
-                </div>
-            </section>
-        </div>
-
-        <section class="aboutMe">
-            <div class="aboutMeTitle">
-                <h1>About Me</h1>
-                <a href="contact.html" class="aboutMeContactBtn">Contact Me</a>
-            </div>
-
-            <div class="aboutWrapper">
-                <p>Hello! My name is Linpei Jiang. A 19 years old photographer, graphic designer, web developer from Fujian China that is currently based in NYC.</p>
-                <br>
-                <p>Over the last 4 years, I have self thought HTML, CSS and some JavaScript. Had many projects like <a href="https://gingerdejournal-studio.github.io/gingerjournal/" target="_blank">GingerJournal</a> and <a href="https://linpei-jiang.github.io/TECHSket/" target="_blank">TECHSket</a>. And over the few months I started to create video content, Looking forward to what I can bring to the community.</p>
-            </div>
-        </section>
-
-        <section class="blogs">
-            <div class="blogsContent">
-                <div class="selectBlogs">
-                    <button id="daily" onclick="switchToDaily()">Daily</button>
-                    <button id="travel" onclick="switchToTravel()">Travel</button>
-                    <button id="other" onclick="switchToOther()">Other</button>
-                </div>
-
-                <div class="blogsContentBox">
-                    <div id="dailyBlogs" class="blogsContentInfo">
-                        <a class="blogsContentInfoBox" href="#"><div class="img" style="background-image: url('');"></div><h3>BLOG BLUEPRINT</h3><p>BLOGBLUEPR INTBLOGB LUEPRI NTBL OGBLU EPRINTBLOGBLUEPRINT</p></a>
-                        <a class="blogsContentInfoBox" href="#"><div class="img" style="background-image: url('');"></div><h3>BLOG BLUEPRINT</h3><p>BLOGBLUEPRI NTBLOGBLUEPR INTBLOGBLUEPRINTBLOGBLUEPRINT</p></a>
-                        <a class="blogsContentInfoBox" href="#"><div class="img" style="background-image: url('');"></div><h3>BLOG BLUEPRINT</h3><p>BLOGBLUEPRINTBLOGBLUEPRI NTBLOGBLUEPRINTBLOGBLUEPRINT</p></a>
-                        <a class="blogsContentInfoBox" href="#"><div class="img" style="background-image: url('');"></div><h3>BLOG BLUEPRINT</h3><p>BLOGBLUEPRINTBLOGBLUEPRIN TBLOGBLUEPRINTBLOGBLUEPRINT</p></a>
-                    </div>
-
-                    <div id="travelBlogs" class="blogsContentInfo">
-                        <a class="blogsContentInfoBox" href="#"><div class="img" style="background-image: url('');"></div><h3>BLOG BLUEPRINT</h3><p>BLOGBLUEPRINTBLOG BLUEPRINTBLOGBL UEPRINTBLOGBLUEPRINT</p></a>
-                        <a class="blogsContentInfoBox" href="#"><div class="img" style="background-image: url('');"></div><h3>BLOG BLUEPRINT</h3><p>BLOGBLUEPRINTBLOGBLUE PRINTBLOGBLUEP RINTBLOGBLUEPRINT</p></a>
-                        <a class="blogsContentInfoBox" href="#"><div class="img" style="background-image: url('');"></div><h3>BLOG BLUEPRINT</h3><p>BLOGBLUEPRINTBLOGBLUE PRINTBLOGBLUEP RINTBLOGBLUEPRINT</p></a>
-                        <a class="blogsContentInfoBox" href="#"><div class="img" style="background-image: url('');"></div><h3>BLOG BLUEPRINT</h3><p>BLOGBLUEPRINTBLOGBLUE PRINTBLOGBLUE PRINTBLOGBLUEPRINT</p></a>
-                    </div>
-
-                    <div id="otherBlogs" class="blogsContentInfo">
-                        <a class="blogsContentInfoBox" href="#"><div class="img" style="background-image: url('');"></div><h3>BLOG BLUEPRINT</h3><p>BLOGBLUEPRI NTBLOGBLUEPRINTBLOGBLU EPRINTBLOGBLUEPRINT</p></a>
-                        <a class="blogsContentInfoBox" href="#"><div class="img" style="background-image: url('');"></div><h3>BLOG BLUEPRINT</h3><p>BLOGBLUEPRINTBLOGB LUEPRINTBL OGBLUEPRINTBLOG BLUEPRINT</p></a>
-                        <a class="blogsContentInfoBox" href="#"><div class="img" style="background-image: url('');"></div><h3>BLOG BLUEPRINT</h3><p>BLOGBLUEPRINTB LOGBLUEPRIN TBLOGBLUEPRINTBL OGBLUEPRINT</p></a>
-                        <a class="blogsContentInfoBox" href="#"><div class="img" style="background-image: url('');"></div><h3>BLOG BLUEPRINT</h3><p></p>BLOGBLUEPRINTBLOGBLUE PRINTBLOGBLUEPRIN TBLOGBLUEPRINT</p></a>
-                    </div>
-                </div>
-
-                <a href="" class="viewMoreBlogs">
-                    <button>View More</button>
-                </a>
-            </div>
-        </section>
-
     </main>
 
     <footer id="footer"></footer>
