@@ -10,7 +10,7 @@
     height: calc(100vh - 100px);
     overflow: hidden;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     #HOME_HERO_WRAPPER {
         height: calc(100vh - 150px);
     }
@@ -237,10 +237,10 @@ body.header-fixed .wrapper, body.header-fixed-mobile .wrapper {
 }
 .scene-grid {
     margin-top: -1rem;
-    padding: 0 10%;
+    padding: 0 3%;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 15px;
 }
 .scene-card {
