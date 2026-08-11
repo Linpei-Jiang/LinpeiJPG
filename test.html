@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssFiles/animation/animation.css">
+    <link rel="stylesheet" href="cssFiles/HEADER_FOOTER/HEADER.css">
+    <link rel="stylesheet" href="cssFiles/HEADER_FOOTER/FOOTER.css">
+
+    <style>
+        body {
+            height: 300vh;
+        }
+
+        .aboutMe {
+            display: flex;
+            width: 100%;
+            height: 50vh;
+            overflow: hidden; /* 防止子元素撑出布局 */
+        }
+
+        .asideLeft, .asideRight {
+            width: 50%;
+            position: absolute;
+            height: 50vh;
+        }
+
+        .asideLeft {
+            background: #1e3a8a;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .asideRight {
+            z-index: 0;
+            padding-left: 50%;
+            background: #facc15;
+            overflow: scroll    ; /* 只滚动垂直方向 */
+        }
+
+        .aboutMeContent {
+            width: 100%;
+            height: auto;
+            padding: 20px;
+            margin-bottom: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 100%; height: 100vh; background: gray;"></div>
+
+    <aside class="aboutMe">
+        <section class="asideLeft">
+            <h1>About Me</h1>
+            <a href="contact.html"><button>Contact Me</button></a>
+        </section>
+        <section class="asideRight">
+            <div class="aboutMeContent">
+                <h3>Content</h3>
+                <p>oasnvconc qnfcqwovnqow qwofnqwofnwq</p>
+            </div>
+
+            <div class="aboutMeContent">
+                <h3>Content</h3>
+                <p>oasnvconc qnfcqwovnqow qwofnqwofnwq</p>
+            </div>
+
+            <div class="aboutMeContent">
+                <h3>Content</h3>
+                <p>oasnvconc qnfcqwovnqow qwofnqwofnwq</p>
+            </div>
+
+            <div class="aboutMeContent">
+                <h3>Content</h3>
+                <p>oasnvconc qnfcqwovnqow qwofnqwofnwq</p>
+            </div>
+
+            <div class="aboutMeContent">
+                <h3>Content</h3>
+                <p>oasnvconc qnfcqwovnqow qwofnqwofnwq</p>
+            </div>
+
+            <div class="aboutMeContent">
+                <h3>Content</h3>
+                <p>oasnvconc qnfcqwovnqow qwofnqwofnwq</p>
+            </div>
+
+            <div class="aboutMeContent">
+                <h3>Content</h3>
+                <p>oasnvconc qnfcqwovnqow qwofnqwofnwq</p>
+            </div>
+        </section>
+    </aside>
+</body>
+<script>
+    const left = document.querySelector('.asideLeft');
+    const right = document.querySelector('.asideRight');
+
+    left.addEventListener('wheel', (e) => {
+        right.scrollTop += e.deltaY;  // 把滚动事件转发给右侧
+    });
+</script>
+
+</html>
