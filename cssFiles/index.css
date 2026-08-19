@@ -391,3 +391,21 @@ body.header-fixed .wrapper, body.header-fixed-mobile .wrapper {
 #bilibili {background-size: 126%;}
 #redNote {background-size: 164%;}
 /*SOCIAL MEDIA END*/
+
+.futurePlanning {
+    height: 60vh;
+}
+
+.futureGoal {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 40px;
+}
+
+.futureGoalLeft, .futureGoalRight {
+    width: 40%;
+    padding: 50px;
+    border: 3px solid black;
+    list-style: revert-layer;
+}
