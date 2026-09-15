@@ -33,8 +33,9 @@ document.addEventListener("DOMContentLoaded", function () {
         // 3. hide card when it was covered
         ScrollTrigger.create({
             trigger: next,
-            start: "top top",
+            start: "center center",
             onEnter: () => card.style.display = "none",
         });
     });
 });
+

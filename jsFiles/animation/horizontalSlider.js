@@ -10,13 +10,10 @@ let scrollTween = gsap.to(sections, {
             trigger: ".container",
             pin: true,
             scrub: 1,
-            end: "+=2000",
+            end: "+=1200",
             markers: false,
         }
     });
-
-console.log(1 / (sections.length - 1))
-
 // whizz around the sections
 sections.forEach((section) => {
     // grab the scoped text
