@@ -29,6 +29,11 @@ main {padding: 0 5%;}
     --background-cards: #F1F3F6;
     --hover: #6692ff;
     --white: #f9f9f9;
+
+    --webDevelopment: #295ddd;
+    --eventPhotography-icon: #FF6060;
+    --shortCinematic-icon: #1b8ea5;
+    --graphicDesign-icon: #E59846;
 }
 
 .section-header {

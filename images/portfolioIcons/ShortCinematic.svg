@@ -1,0 +1,12 @@
+<svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="10" y="10" width="580" height="580" stroke="#1B8EA5" stroke-width="20"/>
+<path d="M499 174C515.569 174 529 187.431 529 204V243H71V204C71 187.431 84.4315 174 101 174H499Z" stroke="#1B8EA5" stroke-width="20"/>
+<rect x="138.668" y="174.96" width="19" height="78" transform="rotate(-25.8762 138.668 174.96)" fill="#1B8EA5" stroke="#1B8EA5"/>
+<rect x="199.668" y="174.96" width="19" height="78" transform="rotate(-25.8762 199.668 174.96)" fill="#1B8EA5" stroke="#1B8EA5"/>
+<rect x="260.668" y="174.96" width="19" height="78" transform="rotate(-25.8762 260.668 174.96)" fill="#1B8EA5" stroke="#1B8EA5"/>
+<rect x="321.668" y="174.96" width="19" height="78" transform="rotate(-25.8762 321.668 174.96)" fill="#1B8EA5" stroke="#1B8EA5"/>
+<rect x="382.668" y="174.96" width="19" height="78" transform="rotate(-25.8762 382.668 174.96)" fill="#1B8EA5" stroke="#1B8EA5"/>
+<rect x="443.668" y="174.96" width="19" height="78" transform="rotate(-25.8762 443.668 174.96)" fill="#1B8EA5" stroke="#1B8EA5"/>
+<path d="M529 277V413C529 429.569 515.569 443 499 443H101C84.4315 443 71 429.569 71 413V277H529Z" stroke="#1B8EA5" stroke-width="20"/>
+<circle cx="114" cy="209" r="14.5" fill="#1B8EA5" stroke="#1B8EA5"/>
+</svg>

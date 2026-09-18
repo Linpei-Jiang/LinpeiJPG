@@ -43,8 +43,7 @@ header {
 
 @media (max-width: 430px)
 {
-    .icon {margin-left: 4%;}
-    .logoSet {margin-left: 2%;}
+    .logoSet {margin-left: 1%;}
     .logoSet h2 {font-size: 22px;}
 }
 

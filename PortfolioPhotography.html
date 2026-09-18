@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LinpeiJPG - Blog</title>
+    <title>LinpeiJPG - Event Photography</title>
     <link rel="stylesheet" href="cssFiles/root.css">
-    <link rel="stylesheet" href="cssFiles/blog.css">
+    <link rel="stylesheet" href="cssFiles/portfolio/portfolioRoot.css">
+    <link rel="stylesheet" href="cssFiles/portfolio/Photography.css">
     <link rel="stylesheet" href="cssFiles/pagination.css">
     <link rel="stylesheet" href="cssFiles/animation/animation.css">
     <link rel="stylesheet" href="cssFiles/HEADER_FOOTER/HEADER.css">
@@ -27,24 +28,26 @@
     </script>
 </head>
 <body>
-    <header id="header" data-page="blog"></header>
+    <header id="header"></header>
 
     <div class="hero">
-
+        <div class="homeHeroWords">
+            <div id="icon" style="background-image: url('images/portfolioIcons/EventPhotography.svg');"></div>
+            <h1>Photography</h1>
+            <div class="spacer" style=" background: var(--eventPhotography-icon);"></div>
+            <p>Capturing Unique Moments During Events, Preparation For Post-Event Content.</p>
+        </div>
     </div>
 
-    <div class="gap"></div>
-
     <main>
-        <div class="blogContentGrid"></div>
+        <div class="portfolioGrid"></div>
         <div class="pagination"></div>
     </main>
-
-    <div class="gap"></div>
 
     <footer id="footer"></footer>
 
 </body>
     <script type="module" src="jsFiles/HEADER_FOOTER/HEADER_FOOTER.js"></script>
-    <script src="jsFiles/blog.js"></script>
+    <script src="jsFiles/portfolio/portfolioPagination.js"></script>
+    <script src="jsFiles/portfolio/photography.js"></script>
 </html>

@@ -1,12 +1,25 @@
 fetch("https://opensheet.elk.sh/18qqmRSW7wCL0nvER4sQkkl391qQpT9_sEIqOs45XeLE/Blogs")
     .then(res => res.json())
     .then(data => {
+        // Sort newest → oldest
         const sorted = data.sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
-        const latestThree = sorted.slice(0, 4);
 
-        const grid = document.querySelector(".blogContentGrid");
+        renderPage(sorted, currentPage);
+        renderPagination(sorted);
+    });
 
-        latestThree.forEach(item => {
+const itemsPerPage = 10;
+let currentPage = 1;
+
+function renderPage(data, page) {
+    const start = (page - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const paginatedItems = data.slice(start, end);
+
+    const grid = document.querySelector(".blogContentGrid");
+    grid.innerHTML = "";
+
+    paginatedItems.forEach(item => {
             const slug = slugify(item.title);
             const card = document.createElement("a");
             card.href = `otherHTML/blogDetails.html?title=${slug}`;
@@ -25,7 +38,26 @@ fetch("https://opensheet.elk.sh/18qqmRSW7wCL0nvER4sQkkl391qQpT9_sEIqOs45XeLE/Blo
         `;
             grid.appendChild(card);
         });
-    });
+}
+
+function renderPagination(data) {
+    const totalPages = Math.ceil(data.length / itemsPerPage);
+    const pagination = document.querySelector(".pagination");
+    pagination.innerHTML = "";
+
+    for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement("button");
+        btn.textContent = i;
+        btn.className = (i === currentPage) ? "active" : "";
+        btn.addEventListener("click", () => {
+            currentPage = i;
+            renderPage(data, currentPage);
+            renderPagination(data);
+        });
+        pagination.appendChild(btn);
+    }
+}
+
 
 function slugify(text) {
     return text.toLowerCase().trim()

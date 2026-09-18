@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
             scrollTrigger: {
                 trigger: next,
                 start: "top bottom",
-                end: "top top",
+                end: "top center",
                 scrub: true,
             }
         });
