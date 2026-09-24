@@ -104,12 +104,12 @@ body.header-fixed .wrapper, body.header-fixed-mobile .wrapper {
 
 /*MOBILE VIEW*/
 .categories {
+    margin-top: 150px;
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
-    padding: 50px 10px;
-    margin: 20px 0;
+    padding: 50px 5%;
 }
 .categoriesCard {
     margin-top: 15px;
@@ -117,7 +117,6 @@ body.header-fixed .wrapper, body.header-fixed-mobile .wrapper {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 8px;
     justify-content: space-evenly !important;
-    padding: 0 10px;
 }
 .categoriesMobileCard a {
     aspect-ratio: 1/1;
@@ -138,8 +137,8 @@ body.header-fixed .wrapper, body.header-fixed-mobile .wrapper {
 .categoriesMobileCard a:hover {
     border-radius: 100px;
 }
-@media (max-width: 800px) {.container {display: none;} .categories {display: flex; margin-top: 100px;}}
-@media (min-width: 800px) {.container {display: flex;} .categories {display: none;}}
+/*@media (max-width: 800px) {.container {display: none;} .categories {display: flex; margin-top: 100px;}}*/
+/*@media (min-width: 800px) {.container {display: flex;} .categories {display: none;}}*/
 @media (max-width: 600px) {.categoriesCard {grid-template-columns: 49% 49%;}}
 /*HORIZONTAL SLIDER END*/
 
@@ -198,7 +197,7 @@ body.header-fixed .wrapper, body.header-fixed-mobile .wrapper {
 
 /*BEHIND THE SCENE SECTION START*/
 .featuredWork {
-    margin-top: -10px;
+    margin-top: 100px;
     width: 100%;
 }
 [data-tab-content] {display: none;}
